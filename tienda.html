@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda Porcicarnes</title>
+    <link rel="stylesheet" href="tienda.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="logo.png" alt="Logo Porcicarnes" class="logo"> Tienda Porcicarnes
+        </h1>
+
+        <div class="categorias">
+            <button onclick="mostrarMinoristas()">🏪 Minoristas</button>
+            <button onclick="mostrarMayoristas()">🏢 Mayoristas</button>
+            <button onclick="mostrarTodosLosProductos()">📦 Todos</button>
+            <button onclick="mostrarDerivadosCarnicos()">🥓 Derivados Cárnicos</button>
+        </div>
+
+        <div class="buscador">
+            <input type="text" id="barraBusqueda" placeholder="🔍 Buscar productos..." onkeyup="buscarProductos()" onfocus="this.placeholder=''" onblur="this.placeholder='🔍 Buscar productos...'">
+        </div>
+
+        <div class="carrito" onclick="mostrarCarritoModal()">
+            🛒 Carrito (<span id="contadorCarrito">0</span>)
+        </div>
+    </header>
+
+    <main>
+        <h2 id="tituloProductos">Productos Minoristas</h2>
+        <div class="contenedor-productos" id="listaProductos">
+            <!-- Productos se cargan aquí dinámicamente -->
+        </div>
+    </main>
+
+    <!-- Modal del Carrito -->
+    <div id="overlay" class="overlay"></div>
+    <div id="carritoModal" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h2>🛒 Tu Carrito de Compras</h2>
+                <button onclick="cerrarCarritoModal()" class="btn-cerrar">✕</button>
+            </div>
+            <div class="modal-body">
+                <ul id="listaCarrito"></ul>
+                <div class="resumen-carrito">
+                    <p id="contadorCarritoText">Total productos: <strong>0</strong></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="vaciarCarrito()" class="btn-vaciar">Vaciar Carrito</button>
+                <button onclick="finalizarPedido()" class="btn-enviar">📱 Enviar por WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tienda.js"></script>
+</body>
+
+</html>
