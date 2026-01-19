@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Cliente - Porcicarnes</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <img src="logo.png" class="logo">
+        <h1>REGISTRO DE CLIENTE</h1>
+
+        <form id="formRegistro">
+            <input type="text" id="razonSocial" placeholder="Razón Social *" required>
+            <input type="text" id="nombreComercial" placeholder="Nombre Comercial">
+            <input type="text" id="nit" placeholder="NIT *" required>
+            <input type="text" id="contacto" placeholder="Contacto *" required>
+            <input type="tel" id="telefono" placeholder="Teléfono *" required>
+            <input type="text" id="direccion" placeholder="Dirección *" required>
+
+            <label>Puntos de Venta *</label>
+            <select id="puntosVenta" required>
+                <option value="">Seleccione...</option>
+                <option value="Bello">Punto de venta Bello</option>
+                <option value="Caldas">Punto de venta Caldas</option>
+                <option value="Copacabana">Punto de venta Copacabana</option>
+                <option value="Envigado">Punto de venta Envigado</option>
+                <option value="Itagui">Punto de venta Itagui</option>
+                <option value="La Castellana">Punto de venta La Castellana</option>
+                <option value="La Minorista">Punto de venta La Minorista</option>
+                <option value="Mayorista">Punto de venta Mayorista</option>
+                <option value="Niquía">Punto de venta Niquía</option>
+                <option value="Plaza de Flórez">Punto de venta Plaza de Flórez</option>
+                <option value="Rionegro">Punto de venta Rionegro</option>
+                <option value="Sabaneta">Punto de venta Sabaneta</option>
+                <option value="Sn Ant. de Prado">Punto de venta Sn Ant. de Prado</option>
+                <option value="La Ceja">Punto de venta La Ceja</option>
+                <option value="La 33">Punto de venta La 33</option>
+                <option value="Apartadó">Punto de venta Apartadó</option>
+                <option value="Barranquilla">Punto de venta Barranquilla</option>
+                <option value="Cali">Punto de venta Cali</option>
+                <option value="Cartagena">Punto de venta Cartagena</option>
+                <option value="Corabastos">Punto de venta Corabastos</option>
+                <option value="Dosquebradas">Punto de venta Dosquebradas</option>
+                <option value="La Dorada">Punto de venta La Dorada</option>
+                <option value="Monteria">Punto de venta Montería</option>
+                <option value="Palmira">Punto de venta Palmira</option>
+                <option value="Sincelejo">Punto de venta Sincelejo</option>
+                <option value="Tuluá">Punto de venta Tuluá</option>
+                <option value="Chia">Punto de venta Chía</option>
+                <option value="Soledad">Punto de venta Soledad</option>
+                <option value="Sahagún">Punto de venta Sahagún</option>
+                <option value="Lorica">Punto de venta Lorica</option>
+                <!-- NOTA: Tienes "Lorica" duplicado, aquí lo dejo una sola vez -->
+            </select>
+            <!-- ¡ESTA ES LA ETIQUETA QUE FALTABA! -->
+
+            <div class="terminos">
+                <input type="checkbox" id="aceptarTerminos" required>
+                <label for="aceptarTerminos">Acepto los términos y condiciones *</label>
+            </div>
+
+            <div class="botones">
+                <button type="submit" class="btn-registrar">Registrar Cliente</button>
+                <button type="button" class="btn-volver" id="btnVolver">Volver al Inicio</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="registro.js"></script>
+</body>
+
+</html>
